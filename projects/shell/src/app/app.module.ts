@@ -6,8 +6,12 @@ import { HomeComponent } from './home/home.component';
 import { APP_ROUTES } from './app.routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthLibModule } from 'auth-lib';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 // import { SharedLibModule } from 'projects/shared-lib/src/public-api';
 
 @NgModule({
@@ -17,12 +21,17 @@ import { HttpClientModule } from '@angular/common/http';
     // SharedLibModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatCheckboxModule
   ],
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

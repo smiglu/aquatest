@@ -1,6 +1,6 @@
-import { Component, ViewChild, ViewContainerRef, ɵrenderComponent as renderComponent, Inject, Injector, ComponentFactoryResolver } from '@angular/core';
-import { AuthLibService } from 'auth-lib';
-import { HttpClient } from '@angular/common/http';
+import {Component} from '@angular/core';
+import {AuthLibService} from 'auth-lib';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'shell';
+  opened: boolean;
+  events: string[] = [];
 
   constructor(private service: AuthLibService, http: HttpClient) {
     this.service.login('Max', null);
